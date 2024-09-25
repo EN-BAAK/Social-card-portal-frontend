@@ -1,0 +1,9 @@
+.exit-btn {
+  @include same-scale(50px);
+  @include prefixer(border-radius, 50%);
+  @include centering;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 50px;
+}

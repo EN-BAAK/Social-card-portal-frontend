@@ -1,0 +1,96 @@
+#header {
+  height: 72px;
+  h1 {
+    color: var(--c-main);
+  }
+
+  ul {
+    background-color: var(--c-second);
+    max-height: 0;
+    padding: 0;
+    box-shadow: 0 12px 15px var(--c-second-shadow);
+    position: absolute;
+    @include set-position(72px, 0, auto, 0);
+    @include prefixer(transition, var(--time-transition));
+    overflow: hidden;
+    z-index: 998;
+
+    &.active {
+      max-height: 100vh;
+    }
+
+    li {
+      background-color: var(--c-second);
+      @include prefixer(transition, var(--time-transition));
+
+      a p {
+        font-weight: 500;
+        font-size: 20px;
+        color: var(--c-black-main);
+        @include prefixer(transition, var(--time-transition));
+      }
+
+      &:hover {
+        background-color: var(--c-main-transparent);
+
+        a p {
+          color: var(--c-second);
+        }
+      }
+
+      &.active {
+        background-color: var(--c-main);
+
+        a p {
+          color: var(--c-second);
+        }
+      }
+    }
+
+    @include breakpoints(md) {
+      background-color: transparent;
+      max-height: 100vh;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: static;
+
+      li {
+        background-color: transparent;
+        a p {
+          color: var(--c-black-main);
+        }
+
+        &:hover {
+          background-color: transparent;
+
+          a p {
+            color: var(--c-main-transparent);
+          }
+        }
+
+        &.active {
+          background-color: transparent;
+
+          a p {
+            color: var(--c-main);
+          }
+        }
+      }
+    }
+  }
+
+  .icon {
+    color: var(--c-black-main);
+
+    &:hover {
+      color: var(--c-main-transparent);
+    }
+
+    &.active {
+      @include animation(rotate, 3s infinite linear);
+      color: var(--c-main);
+    }
+  }
+}

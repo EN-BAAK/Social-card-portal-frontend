@@ -1,0 +1,27 @@
+#medias {
+  padding: 0;
+  .window {
+    height: calc(100vh - 18vh);
+
+    table {
+      tbody {
+        tr td {
+          &.w-fit {
+            max-width: 50px;
+            padding: 8px 4px;
+          }
+
+          button {
+            &:hover {
+              @include opacity(0.4);
+            }
+          }
+
+          img {
+            width: 35px;
+          }
+        }
+      }
+    }
+  }
+}

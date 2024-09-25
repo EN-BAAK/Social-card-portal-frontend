@@ -1,0 +1,16 @@
+#login {
+  background-color: var(--c-second);
+
+  .form {
+    box-shadow: 1px 1px 15px 0 var(--c-second-shadow),
+      1px 1px 30px 0 var(--c-second-shadow);
+
+    h3 {
+      color: var(--c-main);
+    }
+
+    input {
+      width: 250px;
+    }
+  }
+}

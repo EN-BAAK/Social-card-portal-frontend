@@ -1,0 +1,58 @@
+#digital-card {
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: transparent;
+  }
+
+  .background-img-holder {
+    &.has-logo {
+      .logo-holder {
+        @include same-scale(130px);
+        margin: 0 auto;
+        position: static;
+      }
+    }
+
+    &.has-background-img {
+      max-width: 550px;
+      height: 220px;
+      margin: 0 auto 20px;
+      &.has-logo {
+        margin: 0 auto 70px;
+      }
+      .logo-holder {
+        position: absolute;
+        bottom: -65px;
+        @include center-x;
+      }
+    }
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+
+  .template {
+    flex: 1;
+    max-height: calc(100% - 30px);
+  }
+
+  .company {
+    height: 30px;
+    flex-shrink: 0;
+    a {
+      @include center-x;
+      font-size: 15px;
+      bottom: 0;
+    }
+  }
+}

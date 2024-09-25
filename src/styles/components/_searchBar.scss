@@ -1,0 +1,11 @@
+.search-bar {
+  @include animation(come-down, 0.5s linear forwards);
+  width: fit-content;
+  position: fixed;
+  top: -50px;
+  @include center-x;
+
+  &.active {
+    top: 35px;
+  }
+}

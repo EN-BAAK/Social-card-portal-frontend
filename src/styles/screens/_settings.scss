@@ -1,0 +1,23 @@
+#settings {
+  overflow: auto;
+  padding: 72px 0 20px;
+
+  h1,
+  h4 {
+    color: var(--c-main);
+  }
+
+  .card {
+    width: fit-content;
+    form {
+      width: fit-content;
+      .form-control {
+        width: 300px;
+
+        @include breakpoints(lg) {
+          width: 350px;
+        }
+      }
+    }
+  }
+}

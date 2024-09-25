@@ -1,0 +1,105 @@
+#create-customer {
+  .form {
+    @include breakpoints(md) {
+      width: fit-content;
+    }
+
+    h3 {
+      color: var(--c-main);
+    }
+
+    .row {
+      @include breakpoints(lg) {
+        // background-color: red;
+        margin: 0 auto;
+      }
+
+      label {
+        width: 200px;
+
+        &.color-label {
+          width: 200px;
+        }
+      }
+
+      input {
+        background-color: var(--c-second-shadow);
+
+        &.flex-1 {
+          flex: 1;
+        }
+
+        &[type="color"] {
+          flex: 1;
+
+          @include breakpoints(sm) {
+            width: 50px;
+            flex: none;
+          }
+        }
+
+        &[type="radio"] {
+          width: 50px;
+
+          @include breakpoints(sm) {
+            width: 50px;
+          }
+        }
+      }
+
+      .form-check,
+      .form-switch {
+        flex: 1;
+        margin: 0;
+        padding: 0 0 0 50px;
+        @include centering;
+
+        input {
+          width: 75px;
+          height: 25px;
+          margin: 0;
+          border: 2px solid var(--c-main);
+
+          &:focus {
+            box-shadow: none !important;
+          }
+
+          &[value="true"] {
+            background-color: var(--c-main-shadow);
+          }
+        }
+      }
+
+      .options-holder {
+        input {
+          appearance: none;
+          display: none;
+        }
+
+        label.form-check-label {
+          background-color: var(--c-grey-text);
+          width: fit-content;
+          padding: 4px 6px;
+
+          &.active {
+            background-color: var(--c-main);
+          }
+
+          @include breakpoints(md) {
+            padding: 4px 24px;
+          }
+        }
+      }
+
+      .save-prev-logo {
+
+      }
+
+      .btn {
+        width: fit-content;
+        margin-left: auto;
+        padding: 4px 24px;
+      }
+    }
+  }
+}

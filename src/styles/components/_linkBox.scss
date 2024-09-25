@@ -1,0 +1,22 @@
+.link-box {
+  height: 35px;
+  .card-body {
+    label {
+      width: 175px !important;
+      color: var(--c-main);
+    }
+
+    input {
+      flex: 1;
+      background-clip: padding-box;
+      border: 1px solid var(--c-second-shadow);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .btn {
+      height: 100%;
+      @include centering;
+    }
+  }
+}

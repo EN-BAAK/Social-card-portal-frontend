@@ -1,0 +1,25 @@
+.add-media-modal {
+  background-color: var(--c-second-transparent);
+  position: absolute;
+  @include centering;
+  @include set-position(0, 0, 0, 0);
+  z-index: 997;
+
+  .form {
+    width: 350px;
+    box-shadow: 1px 1px 15px 0 var(--c-second-shadow);
+    @include animation(popup, 0.8s ease-out);
+
+    @include breakpoints(md) {
+      width: 500px;
+    }
+
+    h3 {
+      color: var(--c-main);
+    }
+
+    label {
+      font-weight: 500;
+    }
+  }
+}
