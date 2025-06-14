@@ -51,7 +51,6 @@ const AddMediaModal =
     const onSubmit = async (data: MediaForm, formik: FormikHelpers<MediaForm>) => {
       const formData: FormData = new FormData();
       formData.append("name_ar", data.name_ar)
-      formData.append("name_he", data.name_he)
       formData.append("name_en", data.name_en)
       formData.append("show_link", String(data.show_link))
 
@@ -91,7 +90,6 @@ const AddMediaModal =
                 <h3 className='text-center my-3'>{isEdit ? "Edit" : "Add"} Media</h3>
 
                 <InputField type='text' name='name_ar' dir='rtl' label='Arabic Name' styles='mb-3' labelStyle='text-black-50' />
-                <InputField type='text' name='name_he' label='Hebrew Name' styles='mb-3' labelStyle='text-black-50' />
                 <InputField type='text' name='name_en' label='English Name' styles='mb-3' labelStyle='text-black-50' />
 
                 <InputFileImage

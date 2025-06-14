@@ -4,7 +4,6 @@ import { Customer } from "./types";
 export const languages = [
   { id: "ar", value: "ar", label: "Arabic" },
   { id: "en", value: "en", label: "English" },
-  { id: "he", value: "he", label: "Hebrew" },
 ];
 
 export const templates = [
@@ -40,6 +39,5 @@ export const initialCustomerValue: Customer = {
 
 export const validationMediaSchema = Yup.object({
   name_ar: Yup.string().required("Arabic name is required"),
-  name_he: Yup.string().required("Hebrew name is required"),
   name_en: Yup.string().required("English name is required"),
 });

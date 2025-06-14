@@ -66,6 +66,7 @@ const App = (): React.JSX.Element => {
             )
           }
           < Route path="/:domain" element={<Cards />} />
+          < Route path="/" element={<Navigate to={"/dashboard"} />} />
           < Route path="*" element={<ErrorRouter />} />
         </Routes>
       </Router>

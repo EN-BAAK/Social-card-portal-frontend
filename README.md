@@ -23,7 +23,7 @@ Social Card Portal is a full-stack web project that allows users to create digit
 
 #### Media Page
 
-- Display all media with English, Hebrew, Arabic names nad Logo imaeg
+- Display all media with English, Arabic names and Logo image
 - Add, edit, and delete media with warning prompts
 
 #### Customers Page

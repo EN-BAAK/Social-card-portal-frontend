@@ -45,7 +45,6 @@ export type Media = {
   id: number;
   name_en: string;
   name_ar: string;
-  name_he: string;
   show_link: boolean;
   img: string;
 };
@@ -53,7 +52,6 @@ export type Media = {
 export type MediaForm = {
   name_en: string;
   name_ar: string;
-  name_he: string;
   show_link?: boolean;
 };
 
@@ -81,7 +79,7 @@ export type Customer = {
   background_color_1: string;
   background_color_2: string;
   button_color: string;
-  language: "ar" | "en" | "he" | "";
+  language: "ar" | "en" | "";
   template_type: string;
   links: Link[];
 };

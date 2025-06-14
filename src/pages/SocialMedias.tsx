@@ -70,7 +70,6 @@ const SocialMedias = (): React.JSX.Element => {
                 <th>#</th>
                 <th>Icon</th>
                 <th>Arabic Name</th>
-                <th>Hebrew Name</th>
                 <th>English Name</th>
               </tr>
             </thead>
@@ -97,7 +96,6 @@ const SocialMedias = (): React.JSX.Element => {
                   </td>
                   <td className='bg-black'><img src={`data:image/jpeg;base64,${media.img}`} alt="" /></td>
                   <td>{media.name_ar}</td>
-                  <td>{media.name_he}</td>
                   <td>{media.name_en}</td>
                 </tr>
               ))}
@@ -117,7 +115,6 @@ const SocialMedias = (): React.JSX.Element => {
         initialValues={{
           name_ar: selectedMedia?.name_ar || "",
           name_en: selectedMedia?.name_en || "",
-          name_he: selectedMedia?.name_he || "",
           show_link: selectedMedia?.show_link || false,
         }}
       />}
